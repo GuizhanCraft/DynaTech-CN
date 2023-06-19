@@ -3,7 +3,7 @@ package me.profelements.dynatech.listeners;
 import io.github.thebusybiscuit.exoticgarden.items.CustomFood;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.player.PlayerBackpack;
-import io.github.thebusybiscuit.slimefun4.api.player.PlayerProfile;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import me.profelements.dynatech.DynaTech;
 import me.profelements.dynatech.events.PicnicBasketFeedPlayerEvent;
 import me.profelements.dynatech.items.backpacks.PicnicBasket;
@@ -69,11 +69,11 @@ public class PicnicBasketListener implements Listener {
     }
 
     private void takeFoodFromPicnicBasket(@Nonnull Player p, @Nonnull ItemStack picnicBasket) {
-        PlayerProfile.getBackpack(picnicBasket, backpack -> {
+        PlayerBackpack.getAsync(picnicBasket, backpack -> {
             if (backpack != null) {
                 DynaTech.runSync(() -> consumeFood(p, picnicBasket, backpack));
             }
-        });
+        }, true);
 
     }
     
@@ -107,7 +107,7 @@ public class PicnicBasketListener implements Listener {
                         inv.setItem(slot, null); 
                     }
 
-                    backpack.markDirty();
+                    Slimefun.getDatabaseManager().getProfileDataController().saveBackpackInventory(backpack, slot);
                     return true;    
                 } else if (DynaTech.isExoticGardenInstalled() && SlimefunItem.getByItem(item) instanceof CustomFood customFood && (p.getFoodLevel() + customFood.getFoodValue()) <= 20) {
                     p.setFoodLevel(p.getFoodLevel() + customFood.getFoodValue()); 
@@ -120,7 +120,7 @@ public class PicnicBasketListener implements Listener {
                         inv.setItem(slot, null);
                     }
 
-                   backpack.markDirty();
+                    Slimefun.getDatabaseManager().getProfileDataController().saveBackpackInventory(backpack, slot);
                    return true;
                 } else { 
                     //TODO: THIS SHOULD NEVER HAPPEN IF IT DOES SOMETHING DID A BIG NO NO
