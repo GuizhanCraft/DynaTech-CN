@@ -44,6 +44,16 @@ public class GrowthChamberEnd extends AbstractElectricMachine {
 
         registerRecipe(9, new ItemStack[] {new ItemStack(Material.CHORUS_FLOWER)}, new ItemStack[] {new ItemStack(Material.CHORUS_FLOWER , 2), new ItemStack(Material.CHORUS_FRUIT, 8)});
 
+        // 发生器
+        registerRecipe(4, new ItemStack[] {new ItemStack(Material.COBBLESTONE)}, new ItemStack[] {new ItemStack(Material.COBBLESTONE , 64)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.STONE)}, new ItemStack[] {new ItemStack(Material.STONE , 64)});
+        registerRecipe(12, new ItemStack[] {new ItemStack(Material.SMOOTH_STONE)}, new ItemStack[] {new ItemStack(Material.SMOOTH_STONE , 64)});
+        registerRecipe(6, new ItemStack[] {new ItemStack(Material.GRAVEL)}, new ItemStack[] {new ItemStack(Material.GRAVEL , 64)});
+        registerRecipe(6, new ItemStack[] {new ItemStack(Material.SAND)}, new ItemStack[] {new ItemStack(Material.SAND , 64)});
+        registerRecipe(12, new ItemStack[] {new ItemStack(Material.GLASS)}, new ItemStack[] {new ItemStack(Material.GLASS , 64)});
+        registerRecipe(6, new ItemStack[] {new ItemStack(Material.NETHERRACK)}, new ItemStack[] {new ItemStack(Material.NETHERRACK , 64)});
+        registerRecipe(8, new ItemStack[] {new ItemStack(Material.SOUL_SAND)}, new ItemStack[] {new ItemStack(Material.SOUL_SAND , 64)});
+        registerRecipe(128, new ItemStack[] {new ItemStack(Material.OBSIDIAN)}, new ItemStack[] {new ItemStack(Material.OBSIDIAN , 64)});
     } 
     
     @Override

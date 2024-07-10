@@ -44,6 +44,16 @@ public class GrowthChamberEndMK2 extends AbstractElectricMachine {
 
         registerRecipe(9, new ItemStack[] {new ItemStack(Material.CHORUS_FLOWER)}, new ItemStack[] {new ItemStack(Material.CHORUS_FLOWER , 6), new ItemStack(Material.CHORUS_FRUIT, 24)});
 
+        // 发生器
+        registerRecipe(12, new ItemStack[] {new ItemStack(Material.COBBLESTONE)}, new ItemStack[] {new ItemStack(Material.COBBLESTONE , 64),new ItemStack(Material.COBBLESTONE , 64),new ItemStack(Material.COBBLESTONE , 64)});
+        registerRecipe(24, new ItemStack[] {new ItemStack(Material.STONE)}, new ItemStack[] {new ItemStack(Material.STONE , 64),new ItemStack(Material.STONE , 64),new ItemStack(Material.STONE , 64)});
+        registerRecipe(36, new ItemStack[] {new ItemStack(Material.SMOOTH_STONE)}, new ItemStack[] {new ItemStack(Material.SMOOTH_STONE , 64),new ItemStack(Material.SMOOTH_STONE , 64),new ItemStack(Material.SMOOTH_STONE , 64)});
+        registerRecipe(18, new ItemStack[] {new ItemStack(Material.GRAVEL)}, new ItemStack[] {new ItemStack(Material.GRAVEL , 64),new ItemStack(Material.GRAVEL , 64),new ItemStack(Material.GRAVEL , 64)});
+        registerRecipe(18, new ItemStack[] {new ItemStack(Material.SAND)}, new ItemStack[] {new ItemStack(Material.SAND , 64),new ItemStack(Material.SAND , 64),new ItemStack(Material.SAND , 64)});
+        registerRecipe(36, new ItemStack[] {new ItemStack(Material.GLASS)}, new ItemStack[] {new ItemStack(Material.GLASS , 64),new ItemStack(Material.GLASS , 64),new ItemStack(Material.GLASS , 64)});
+        registerRecipe(18, new ItemStack[] {new ItemStack(Material.NETHERRACK)}, new ItemStack[] {new ItemStack(Material.NETHERRACK , 64),new ItemStack(Material.NETHERRACK , 64),new ItemStack(Material.NETHERRACK , 64)});
+        registerRecipe(24, new ItemStack[] {new ItemStack(Material.SOUL_SAND)}, new ItemStack[] {new ItemStack(Material.SOUL_SAND , 64),new ItemStack(Material.SOUL_SAND , 64),new ItemStack(Material.SOUL_SAND , 64)});
+        registerRecipe(384, new ItemStack[] {new ItemStack(Material.OBSIDIAN)}, new ItemStack[] {new ItemStack(Material.OBSIDIAN , 64),new ItemStack(Material.OBSIDIAN , 64),new ItemStack(Material.OBSIDIAN , 64)});
     }
 
     @Override
